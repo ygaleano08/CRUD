@@ -50,7 +50,7 @@ function addData () {
     year: yearInput.value,
     price:priceInput.value
   });
-printCars()
+  cleanValues();
 }
 
 // ESTA FUNCION ARMA UN NUEVO OBJETO DESDE LOS VALORES DE LOS INPUTS Y LE HACE SPLICE AL ARREGLO DE DATOS para editarlo
@@ -65,8 +65,28 @@ function editData () {
     price: priceInput.value
   }
   cars.splice (position, 1, nvalor)
-printCars();
+  cleanValues();
 }
+
+
+// ELIMINAR CARROS
+function deleteCars () {
+  const position = idInput.value;
+  cars.splice (position, 1)
+  cleanValues();
+  alert("Se ha eliminado este registro")
+}
+
+function cleanValues (){
+  idInput.value = '';
+  brandInput.value = '';
+  modelInput.value = '';
+  colorInput.value = '';
+  yearInput.value = '';
+  priceInput.value = '';
+  printCars();
+}
+
 
 printCars();
 
@@ -74,3 +94,5 @@ window.printCars = printCars;
 window.loadData = loadData;
 window.addData = addData;
 window.editData = editData;
+window.deleteCars = deleteCars;
+window.cleanValues = cleanValues;
