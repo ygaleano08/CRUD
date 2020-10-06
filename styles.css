@@ -1,3 +1,8 @@
+* {
+  margin-top: 0;
+}
+
+
 .spaceButtons{
   display: flex;
   justify-content: space-between;
@@ -5,4 +10,25 @@
 
 tr:hover {
 background-color: skyblue;
+}
+
+img {
+  background: url('img/banner.jpg') no-repeat;
+  background-size: cover; 
+  width: 100%;
+
+}
+
+.card {
+  background-color: #343A40;
+}
+
+.text-color {
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.text {
+  text-align: center;
 }

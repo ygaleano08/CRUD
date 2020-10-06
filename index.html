@@ -3,57 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CRUD Asignacion 5 ACADEMLO</title>
+  <title>CRUD ACADEMLO</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="./styles.css">
 
 </head>
 <body>
   <div class="container mt-5">
+    <div class="card">
+      <img src="https://static.websguru.com.ar/var/m_9/93/938/26152/441297-Banner.jpg?1445300868856&v=7.3.45002" alt="">
+    </div>
+
+    <div class="card">
+      <div class="card-body">
 
     <!-- FORMULARIO DE LECTURA Y EDICION -->
     <form>
-      <div class="form-group">
+      <div class="form-group text-color">
         <label for="brandInput">Marca</label>
         <input class="form-control" id="brandInput">
       </div>
-      <div class="form-group">
+      <div class="form-group text-color">
         <label for="modelInput">Modelo</label>
         <input class="form-control" id="modelInput">
       </div>
-      <div class="form-group">
+      <div class="form-group text-color">
         <label for="colorInput">Color</label>
         <input class="form-control" id="colorInput">
       </div>
-      <div class="form-group">
+      <div class="form-group text-color">
         <label for="yearInput">Año</label>
         <input class="form-control" id="yearInput">
       </div>
-      <div class="form-group">
-        <label for="priceInput">Precio($Dolares)</label>
+      <div class="form-group text-color">
+        <label for="priceInput">Precio</label>
         <input class="form-control" id="priceInput">
       </div>
+
+      <button onclick="addData()" class="btn btn-primary"> Agregar </button>
+      <button onclick="NOMBREFUNCION" class="btn btn-primary"> Editar </button>
+      <button onclick="NOMBREFUNCION" class="btn btn-primary"> Eliminar </button>
     
     </form>
+  </div>
+</div>
+   
 
-    <div class="spaceButtons">
-      <button onclick="addData()" class="btn btn-success"> Agregar </button>
-      <button onclick="NOMBREFUNCION" class="btn btn-warning"> Editar </button>
-      <button onclick="NOMBREFUNCION" class="btn btn-danger"> Eliminar </button>
-    </div>
-
-    <table class="table">
-      <thead>
-        <tr>
+    <table class="table table-bordered mt-5">
+      <thead class= "text thead-dark">
+        <tr >
           <th scope="col">ID</th>
           <th scope="col">Marca</th>
           <th scope="col">Modelo</th>
           <th scope="col">Color</th>
           <th scope="col">Año</th>
           <th scope="col">Precio</th>
+          <th scope="col"></th>
         </tr>
       </thead>
-      <tbody id="mainTbody">
+      <tbody class="text" id="mainTbody">
       <!-- AQUI SE LLENA CON LOS DATOS -->
       </tbody>
     </table>
